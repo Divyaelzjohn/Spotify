@@ -86,6 +86,7 @@ body{
 }
 .openbtn{
     font-weight: 700;
+    font-family: 'bold';
     font-size: 0.8125rem;
     align-self: center;
     min-inline-size: 0;
@@ -102,8 +103,6 @@ body{
     vertical-align: middle;
     will-change: transform;
     box-sizing: border-box;
-    height: 43px;
-    width: 80px;
 }
 .openapp{
     font-family: 'bold';
@@ -117,9 +116,10 @@ body{
     position: relative;
     transition: inherit;
     transition-property: background-color,transform;
-    min-block-size: 32px;
+    min-block-size: 24px;
     padding-block: 4px;
-    padding-inline: 16px;
+    padding: 4px 16px;
+    /* padding-inline: 16px; */
 }
 .menu{
     display: flex;
@@ -347,9 +347,9 @@ body{
 .log{
    display: inline;
    padding-right: 12px; 
-   /* max-width: 56px; */
-   /* height: 22px; */
-   /* width: 100%; */
+}
+.log1{
+    display: inline;
 }
 .logbrd{
     height: 40px;
@@ -379,7 +379,7 @@ body{
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    padding-top: 16px;
+    padding-top: 12px;
     box-sizing: border-box;
 }
 .part1{
@@ -443,24 +443,33 @@ body{
     padding-inline-start: 12px 16px 8px;
     font-weight: 700;
     background-color: transparent;
-    font-family: 'small';
+    font-family: 'bold';
     font-size: 0.8125rem;
-    padding: 4px 16px 4px 36px;
-    min-block-size: 34px;
-    /* padding-block: 4px;
-    padding-inline: 16px; */
-    color: #fff;
+    padding-right: 16px !important;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 36px !important;
+    min-block-size: 32px;
+    padding-block: 4px;
+    padding-inline: 16px;
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
     border-radius: 9999px;
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
     vertical-align: middle;
     will-change: transform;
-    border: 1px solid #818181;
-    justify-content: center;
+    border: 1px solid #7c7c7c;
+    color: #fff;
     min-inline-size: 0px;
     display: inline-flex;
     align-items: center;
-    transition-property: border-color,transform;
+    justify-content: center;
 }
 .part3{
     padding-top:16px;
@@ -472,6 +481,13 @@ body{
     inset-inline-start: 12px;
     display: flex;
     position: absolute;
+    font-weight: 700;
+    font-family: 'bold';
+    font-size: 0.8125rem;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    color: #fff;
 }
 .earth img{
     fill: currentColor;
@@ -485,6 +501,9 @@ body{
     .ul1{
         width: 40%;
         margin-right: 24px;
+    }
+    .part1{
+        height: 29.6px;
     }
 }
 @media screen and (min-width:1024px){
@@ -505,13 +524,17 @@ body{
     }
     .privacypolicy{
         flex-flow: row;
-        padding-top: start;
+        align-items: start;
     }
     .part3{
         display: none;
     }
-    .part2{
-        margin-bottom: 8px;
+    .logos{
+        width: 152px;
     }
-
+}
+@media screen and (min-width:1440px){
+    .ul1{
+        width: 20%;
+    }
 }
